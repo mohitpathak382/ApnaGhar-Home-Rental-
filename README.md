@@ -1,7 +1,7 @@
 # Home Rental Project
 
 <div style="background-color: white;">
-  <img src="./Public/images/hrmlogo.svg" alt="Project Logo" width="200" height="200">
+  <img src=".src/main/webapp/assets/images/hrmlogo.svg" alt="Project Logo" width="200" height="200">
 </div>
 
 **Welcome to the Home Rental Project!**
