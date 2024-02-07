@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+
+  <display-name>HomeRental</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+<servlet>
+ <servlet-name>UploadImageServlet</servlet-name>
+        <jsp-file>/houseImage_register.jsp</jsp-file>
+        <multipart-config>
+            <!-- Specify the location to store files -->
+            <location>C:\Users\91877\Desktop\Advance java 23 may\HomeRental\src\main\webapp\HouseImages</location>
+            <!-- Max file size (in bytes) -->
+            <max-file-size>104857600</max-file-size>
+            <!-- Max request size (in bytes) -->
+            <max-request-size>2097152</max-request-size>
+            <!-- Size threshold (in bytes) -->
+            <file-size-threshold>0</file-size-threshold>
+        </multipart-config>
+    </servlet>
+<servlet-mapping>
+        <servlet-name>UploadImageServlet</servlet-name>
+        <url-pattern>/houseImage_register.jsp</url-pattern>
+    </servlet-mapping>
+
+  
+  <context-param> 
+   <description>Location to store uploaded file</description> 
+   <param-name>file-upload</param-name> 
+   <param-value>
+	C:\apache-tomcat-9.0.55\webapps\data\
+   </param-value> 
+</context-param>
+</web-app>

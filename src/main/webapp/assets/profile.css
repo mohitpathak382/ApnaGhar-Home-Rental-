@@ -1,0 +1,80 @@
+/* Reset some default styles */
+body, h1, table {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#1A2238;
+    color: #3B5BA5; /* Default text color */
+}
+
+/* Header Styles */
+
+#header {
+  margin: 0px;
+  margin-top: 0px;
+  padding: 0px;
+  background-color:#1A2238;
+  color: #ffffff; /* White text color */
+  min-height: 5%; 
+  /* Set the height of the header */
+
+}
+#btns {
+  height: 53px;
+  display: flex; /* Use flexbox layout for the buttons */
+  justify-content: flex-end; /* Align the buttons to the right side */
+  align-items: center; /* Vertically center the buttons */
+}
+
+.icons {
+font-size:20px;
+  padding: 12px 20px;
+  color: white;
+  background:transparent; /* Make the button background transparent */
+  border: none; /* Remove the button border */
+  margin: 0 15px; /* Add some horizontal spacing between the buttons */
+  cursor: pointer; /* Change the cursor to a hand icon on hover */
+  border-radius: 5px;
+}
+.icons:hover ,.active:not(hover){
+  color:#FF6A3D;
+}
+.user-profile {
+	font-size:20px;
+    width: 80%;
+    margin: 20px auto;
+	margin-top:75px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width:40%;
+}
+
+.profile-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+   
+}
+
+.profile-label {
+    font-weight: bold;
+    color: #FF6A3D; /* Label color */
+}
+
+.profile-value {
+    color: #1A2238; /* Value color */
+}
+
+a {
+    color: #9DAAF2; /* Link color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F4DB7D; /* Hover color */
+}	

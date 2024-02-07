@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<link rel="shortcut icon" href="/assets/images/old logo.svg">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background: url("https://c.housingcdn.com/demand/s/common/assets/rentCover.7266199e.jpg");
+  display: flex;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #f8f9fa;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #212529;
+}
+
+.header .header-nav {
+  height: 65px;
+  width: 100%;
+  display: flex;
+}
+
+.header-nav .hrmlogo {
+  margin-left: 1px;
+  width: 100px;
+  height: 65px;
+  background-color:#F8F0E3;
+  border-radius:4px;
+}
+
+.header-nav .hrmlogo:hover {
+  background-color: #343a40;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 1px #212529;
+}
+
+.nav-items {
+  width: 60%;
+  margin-left: 35%;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5px;
+  padding-left: 0px;
+  align-content: center;
+}
+
+.nav-items ul {
+  overflow: hidden;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 2px 0px 5px;
+  font-size: 28px;
+}
+
+a.nav-links,
+.dropdown span {
+  color: #f8f9fa;
+  padding: 0px 5px, 10px, 15px;
+  margin: 2px;
+  text-decoration: none;
+}
+
+a.nav-links.active {
+  text-decoration: underline;
+  margin-left: 25px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border-radius: 10px;
+  padding-left: 5px;
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.nav-links:not(.active):hover,
+.dropdown span:hover {
+  color: #adb5bd;
+}
+
+.dropdown {
+  padding-right: 10px;
+}
+
+.nav-links,
+.dropbtn {
+  display: inline-block;
+  color: #f8f9fa;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  color: #343a40;
+}
+
+.nav-links .dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-right: 15px;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-right: 15px;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  background-color: #343a40; /* Added background color */
+}
+
+.dropdown-content a {
+  color: #f8f9fa;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: all 0.2s ease; /* Added transition effect */
+}
+
+.dropdown-content a:hover {
+  border: 2px solid #f8f9fa; /* Changed border color */
+  color: #212529; /* Changed text color */
+  background-color: #f8f9fa; /* Added background color */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.tag {
+  /* position: relative; */
+  width: 37em;
+  height: 6em;
+  margin-top: 7%;
+  margin-left: 30%;
+}
+.message {
+  font-family: monospace;
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
+  padding-bottom: 10px;
+}
+.tag span {
+  font-weight: 700;
+  color: rgb(97, 72, 147);
+  font-family: sans-serif;
+}
+.quote {
+    color:white;
+    width: 378px;
+    height: 44px;
+    margin: 12px auto;
+    background-image: linear-gradient(
+      89deg,
+      rgba(134, 134, 134, 0.095) 8%,
+      rgba(0, 0, 0, 0.11) 50%,
+      rgba(0, 0, 0, 0) 93%
+    );
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 44px;
+  
+}
+.search{
+    position: absolute;
+    width:60.5%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top:16em;
+    margin-left:17.7em;
+    height: 110px;
+    background:rgba(0, 0, 0, 0.527);
+    padding: 60px 10px 0px 30px;
+}
+
+.cityname{
+    margin-top:-1.7em;
+    padding-left: 5px;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+    position: absolute;
+}
+.city,.locality,.submit{
+    width:110px;
+    height: 40%;
+    border:1px solid black;
+    margin-left: 1px;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0);
+
+}
+.locality{
+    width:71%;
+    margin-left: -7px;
+    margin-top: -4px;
+    border: 2px solid rgb(0, 0, 0);
+}
+.submit {
+    width:120px;
+    position: absolute;
+    background-color: rgb(59, 252, 123);
+    margin-left:-01px;
+    margin-top: .3px;
+    font-size: 20px;
+    height:48px;
+    border:1px solid black;
+}
+.submit>button{
+  top: 1%;
+}
+#sicon{
+    font-weight:500;
+    width:15px;
+    padding-right: 10px;
+    height: 15px;
+}
+.sec1{
+    width:100%;
+    /* position: absolute; */
+    margin-top: 32.3em;
+    height:640px;
+}
+.sec1{
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 40%;
+    background: rgb(210, 194, 236);
+    color: black;
+    justify-content: center;
+  }
+  
+.p1 {
+    text-align: center;
+    position: absolute;
+    left: 23%;
+    top: 20%;
+    border-bottom:5px double rgb(124, 78, 78);
+    font-size: 4.6vmin;
+    color: rgb(0, 0, 0);
+    font-family: monospace;
+    text-shadow: 2px 2px #ff057170;
+    font-weight: 800;
+
+  }
+  .p2 {
+    position: absolute;
+    left: 17%;
+    top: 45%;
+    font-size: 4vmin;
+    font-weight: 700;
+    font-family: monospace;
+    letter-spacing: .5px;
+    text-align: center;
+
+    
+  }
+  .p3 {
+    position: absolute;
+    text-align: center;
+    left: 18%;
+    top: 64%;
+    font-size: 4vmin;
+    font-weight: 700;
+    font-family: monospace;
+    letter-spacing: 2px;
+  }
+.stories{
+    position: absolute;
+    left:0%;
+    left: 0%;
+    right: 0%;
+    top:101%;
+    height: 110%;
+    background: rgb(215, 201, 237);
+    color: black; 
+}
+.tagline{
+    position: absolute;
+    font-size:29px;
+    padding-top:19px;
+    letter-spacing: 4px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color:rgb(55, 4, 143) ;
+    font-family:  Georgia, serif;;
+    font-weight: 650;
+    left: 21%;
+  font-style: italic;
+    color: rgb(204, 119, 22);
+}
+.story1 , .story2 , .story3{
+    top:22%;
+    position: absolute;
+    left: 10%;
+    width: 20%;
+    border: 2px solid black;
+    height: 55%;
+    background-color: rgb(229, 234, 203);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1%;
+    box-shadow: 5px 5px 5px 1px rgb(202, 67, 123);
+}
+.story1{
+    left:10%
+}
+.story2{
+    left: 40%;
+}
+.story3{
+    left: 70%;
+}
+.storyimg{
+    width:100%;
+    border-bottom: 2px solid rgb(60, 52, 4);
+    height:250px;
+}
+.name{
+    font-weight: 900;
+    word-spacing: .1cm;
+    text-align: center;
+    padding:4px 1px 5px 1px;
+}
+.desc{
+    padding: 2px 10px 1px 10px;
+}
+.footer{
+    position: absolute;
+    width:100%;
+    border:2px solid rgb(80, 93, 191);
+    height:50%;
+    margin-top: 99%;
+    background:rgb(17, 19, 21);
+    margin-right: 20px;
+    margin-left: 1px;
+}
+
+#aboutus{
+        position: absolute;
+        left: 14%;
+        top: 10%;
+        color: rgb(255, 225, 73);
+        font-family: sans-serif;
+        font-size: 5vmin;
+}
+#AboutMsg {
+    position: absolute;
+    left: 2%;
+    width: 30%;
+    top: 32%;
+    font-size: 2vmin;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+  #copyrights {
+    position: absolute;
+    left: 2%;
+    top: 70%;
+    font-size: 2vmin;
+    color: white;
+  }
+  
+  #version {
+    position: absolute;
+    left: 2%;
+    top: 76%;
+    font-size: 1.9vmin;
+    color: white;
+  }
+  
+  #feedback {
+    position: absolute;
+    left: 65%;
+    width: 35%;
+    height: 100%;
+  }
+  #FeedbackHead {
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    color: white;
+    font-family: sans-serif;
+    font-size: 4vmin;
+  }
+  #mailTxt {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    font-size: 3vmin;
+    color: #d3da0c;
+    letter-spacing: 1px;
+
+  }      
+   #gmail{
+    position: absolute;
+    left:46%;
+    top:31%;
+    font-size:2.3vmin;
+    color:rgb(255, 168, 168);
+  }
+  .gmail{
+    color :red;
+  }
+   #contact{
+   position: absolute;
+   left:30%;
+   top:55%;
+   font-size:2.5vmin;
+   font-family:monospace;
+   letter-spacing:6px;
+   color: rgb(72, 215, 187);
+  }
+  #yIcon , #iIcon , #lIcon , #gIcon , #tIcon{
+     position: absolute; 
+     left:40%;
+     margin-left: 12em;
+     top:69%;
+     width:30%;
+     height:10%;
+  }
+  #yIcon{
+    left:0%;
+  }
+  .yout{
+     color: #ffffff;
+     font-size: 2em;
+  }
+  #yIcon > button{
+    text-align: center;
+    height: 45px;
+    width: 40px;
+     border-radius:25%;
+     background-color:#900303;
+  }
+  #iIcon{
+      color: white;
+      left:9%;
+  }
+  #gIcon{
+    left:18%;
+  }
+  #lIcon{
+    left:27%;
+  }
+  #tIcon{
+    left:36%;
+  }
+  .insta{
+    text-align: center;
+    font-size:2em;
+    color: #c600f3;
+  }
+  #iIcon >button{
+    text-align: center;
+    height: 45px;
+    width: 40px;
+     border-radius:25%;
+     background-color:#ffffffb2;
+  }
+  .git, .linkd , .twit{
+    text-align: center;
+    font-size: 2em;
+  }
+
+  #gIcon > button{
+        text-align: center;
+        height: 45px;
+        width: 40px;
+        border-radius:25%;
+  }
+  #tIcon > button{
+    text-align: center;
+    height: 45px;
+    width: 40px;
+    color:rgb(15, 85, 199);
+    border-radius:25%;
+}
+#lIcon > button{
+    text-align: center;
+    height: 45px;
+    width: 40px;
+    border-radius:25%;
+    color:rgb(3, 33, 82);
+
+}
+  *:focus{
+   outline:none;
+  }
+  body{
+   overflow-x: hidden;
+   scroll-behavior:smooth;
+  }
+  input[type="text"]:hover,
+  input[type="submit"]:hover {
+    background-color: white; /* Green */
+    color: black;
+    border: 2px solid black;
+  }
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    display: none;
+    padding: 10px;
+    font-size: 50px;
+    font-weight: bolder;
+    width: 80px;
+    background-color: #858585;
+    color: #000000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 9999; /* Make sure the button appears on top of other elements */
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: #14065a;
+    color: #ffffff;
+  }
+</style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header-nav">
+            <a href="index.html"><img src="assets/images/hrmlogo.svg" alt="ApnaGhar" class="hrmlogo"></a>
+            <div class="nav-items">
+                <ul>
+                    <li><a class="nav-links active" href="#hero">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn"><span>Register</span></a>
+                        <div class="dropdown-content">
+                            <a href="userRegister.html">Customer</a>
+                            <a href="adminRegister.html">Admin</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn"><span>Login</span></a>
+                        <div class="dropdown-content">
+                            <a href="customerLogin.html">Customer</a>
+                            <a href="adminLogin.html">Admin</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-links" href="#about">About</a></li>
+                    <li><a class="nav-links" href="#contact">Contact</a></li>
+                    <li><a class="nav-links" href="#feedback">Feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="tag">
+        <p class="message">Properties for rent In <span>Indore</span></p>
+        <p class="quote"> Parr...Se Perfect</p>
+    </div>
+    </div>
+
+    <section class="sec1">
+        <div class="quotes1">
+            <p class="p1">'We at ApnaGhar helps you Provide a perfect house'</p>
+            <p class="p2">'Home is the Place where the heart’s tears can dry at their own Pace'</p>
+            <p class="p3">'Home is the Place where the heart can laugh without shyness'</p>
+        </div>
+    </section>
+    <section class="stories">
+        <p class="tagline">
+                We Have Witenessed Millians Of Happy Stories
+        </p>
+
+        <div class="story1">
+            <img src="assets/images/family-1.jpg" alt="Family Pic" class="storyimg">
+            <p class="name">Sharma Family</p>
+            <p class="desc">"We Were looking for a home,We started searching in Offline as well as online mode. Then we
+                come accros <span>APNAGHAR.COM</span>,They helped us choosing our home which is perpect for our family"</p>
+        </div>
+        <div class="story2">
+            <img src="assets/images/family-2.jpg" alt="Kushwaha Family Pic" class="storyimg">
+            <p class="name">Kushwaha Family</p>
+            <p class="desc">We Recently shifted to Indore from Pune, We were having trouble finding a house for ourself we started searching online we went through Many resources but At Last we Found our House from <span>APNAGHAR.COM</span> </p>
+        </div>
+        <div class="story3">
+            <img src="assets/images/family-3.jpg"  alt = "Yadav Family" class="storyimg">
+            <p class="name">Yadav Family</p>
+            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci facere fugiat corrupti amet harum mollitia non, animi eaque? Ducimus, iste, voluptates ullam rem accusantium repudiandae officiis saepe odit .</p>
+        </div>
+    </section>
+    <button onclick="scrollToTop()" id="scrollToTopBtn">&#8593</button>
+
+    <footer class="footer">
+        <div class="divider">
+           <div id="about">
+            <p id="aboutus">About Us</p>
+            <p id="AboutMsg">ApnaGhar is India's online Property marketplace to rent residential properties. Adjudged as the most preferred real estate portal in India by
+                various independent surveys.</p>
+             <p id="copyrights">&copy; Copyright 05.04.2022 , All Rights Reserved .</p>
+             <p id="version">Version 1.0</p>
+           </div>
+           <div id="feedback">
+            <p id="FeedbackHead">Feedback</p>
+            <p id="mailTxt">MAIL us at</p>
+            <p id="gmail">
+               <span><i class="fa fa-google-plus gmail"></i></span><span> ApnaGhar0504@gmail.com</span>
+            </p>
+            <p id="contact">Connect Us Through</p>
+            <p></p>
+            <p id="yIcon"><button onclick="window.location.href='https://www.youtube.com/channel/UCAyLY9OzOOPMd1_Mm9gayOg'"><i class="fa fa-youtube yout" ></i></button></p>
+            <p id="iIcon"><button onclick="window.location.href='https://www.instagram.com/instagram/'"><i
+                     class="fa fa-instagram insta"></i> </button></p>
+            <p id="lIcon"><button onclick="window.location.href='https://linkedin.com/in/mohit-pathak-883178194'"><i class="fa fa-linkedin linkd"></i></button></p>
+            <p id="gIcon"><button onclick="window.location.href='https://github.com/mohitpathak382'"><i class="fa fa-github git"></i></button></p>
+            <p id="tIcon"><button onclick="window.location.href='https://twitter.com/mpathak382'"><i class="fa fa-twitter twit"></i></button></p>
+         </div>
+      </div>
+        </div>
+    </footer>
+
+<script type="text/javascript">
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("scrollToTopBtn").style.display = "block";
+  } else {
+    document.getElementById("scrollToTopBtn").style.display = "none";
+  }
+  
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    document.getElementById("scrollToTopBtn").style.display = "block";
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/631a4d6054f06e12d893953c/1gcfbshqu';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+body  {
+    background-size: cover; /* This property ensures the background image covers the entire body */
+    background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+#header {
+  margin: 0px;
+  margin-top: 0px;
+  padding: 0px;
+  background-color:#1A2238;
+  color: #ffffff; /* White text color */
+  min-height: 5%; 
+  /* Set the height of the header */
+
+}
+#btns {
+  height: 53px;
+  display: flex; /* Use flexbox layout for the buttons */
+  justify-content: flex-end; /* Align the buttons to the right side */
+  align-items: center; /* Vertically center the buttons */
+}
+
+.icons {
+font-size:20px;
+  padding: 12px 20px;
+  color: white;
+  background:transparent; /* Make the button background transparent */
+  border: none; /* Remove the button border */
+  margin: 0 15px; /* Add some horizontal spacing between the buttons */
+  cursor: pointer; /* Change the cursor to a hand icon on hover */
+  border-radius: 5px;
+}
+.icons:hover ,.active:not(hover){
+  color:#FF6A3D;
+}.headerDiv {
+  font-size: 20px; /* Set the font size of the text inside the button */
+  margin-left: 5px; /* Add some left margin to the text inside the button */
+}
+.hellomessage {
+  font-size: larger;
+  font-family: cursive;
+  text-align: center;
+  text-decoration:underline darkgoldenrod;
+  margin-top: 7%;
+    width: 100%;
+  color: goldenrod;
+}
+#preferenceForm {
+  margin-left: 25%;
+  margin-top: 7%;
+  background-color: transparent; 
+  
+}
+
+#title {
+  margin-right:26%;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(255, 0, 0);
+  margin-bottom: 20px; /* Add some bottom margin */
+}
+#title1{
+  font-family:sans-serif;
+  font-size: xx-large;
+  text-align: center;
+}
+
+#pform {
+  display: flex; /* Use flexbox layout for the form */
+  flex-wrap: wrap; /* Allow the form to wrap on smaller screens */
+  justify-content: center; /* Center the form items horizontally */
+}
+
+input[type="text"],
+input[type="number"] {
+  font-size: 16px; /* Set the font size of the inputs */
+  padding: 10px; /* Add some padding to the inputs */
+  margin: 10px; /* Add some margin between the inputs */
+  border-radius: 5px; /* Add some rounded corners to the inputs */
+  border: none; /* Remove the input border */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Add an inset shadow effect */
+}
+
+input[type="submit"] {
+  background-color: #1e90ff; /* Set the background color of the submit button */
+  color: #ffffff; /* Set the text color of the submit button */
+  font-size: 16px; /* Set the font size of the submit button */
+  padding: 10px 20px; /* Add some padding to the submit button */
+  margin: 10px; /* Add some margin between the inputs and the submit button */
+  border: none; /* Remove the submit button border */
+  border-radius: 5px; /* Add some rounded corners to the submit button */
+  cursor: pointer; /* Change the cursor to a hand icon on hover */
+}
+
+input[type="submit"]:hover {
+  background-color: #0f71b9; /* Change the background color on hover */
+}
+.footer{
+  margin-top:23%;
+  width: 100%;
+  display: flex;
+  padding: 10px 15px;
+  background-color: #223551;
+  color: aliceblue;
+  border-top: 1px solid #000000;
+}
