@@ -53,7 +53,7 @@ This project is a web application built using Java Servlet JSP, HTML, CSS, and M
 
 ## Contributing
 
-We welcome contributions from the community! Please refer to the CONTRIBUTING.md file for guidelines on how to contribute code, report issues, and suggest improvements.
+We welcome contributions from the community! Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md( file for guidelines on how to contribute code, report issues, and suggest improvements.
 
 ## License
 
